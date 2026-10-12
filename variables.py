@@ -80,3 +80,9 @@ resultat = eval("1 + 1")
 print(resultat)
 
 # Exo 1
+a = 5
+b = 7
+
+temp = a
+a = b
+b = temp
