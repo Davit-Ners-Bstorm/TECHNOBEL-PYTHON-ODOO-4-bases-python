@@ -134,3 +134,70 @@ age = 20
 
 # Python permet aussi les comparaisons chaînées
 # print(18 <= age < 65)  # True
+
+# Exercices
+# 1 - 2
+A = 12
+B = 3 * A + 8
+C = B - 2 * A
+D = (C + 25) * B
+E = (A + B) % 10
+F = (C * D) // (B + 6)
+G = (D + E) // (F - 9)
+
+print("A =", A)
+print("B =", B)
+print("C =", C)
+print("D =", D)
+print("E =", E)
+print("F =", F)
+print("G =", G)
+
+# 3
+A, B, C, D = 13, 5, True, not(True)
+
+print((A > 10) and (B < 20)) # True
+print((C != 40) or (D >= 100)) # True
+print((A == 2) and (not (B > 15))) # False
+print((C > 50) or (not (D < 200))) # False
+print(((A < B) and (C > 30)) or (D == 270)) # False
+print(not ((A * B) > 100)) # True
+print(((B == 15) or ((C > 60) and (A < 5)))) # False
+print((((B == 15) or ((C > 60) and (A < 5))) and (A < B)) or (not (B == 9))) # True
+
+
+# 4
+a = 5
+b = 7
+
+# Version mult
+a *= b
+b = a // b
+a = a // b
+
+# Version add
+a = 5
+b = 7
+
+a += b
+b = a - b
+a = a - b
+
+# 5
+# Version flex
+nums = 4561
+jour, heure, min, sec = nums//(60*60*24), nums%(60*60*24)//(60*60), nums%(60*60)//60, nums%60
+print(jour, heure, min, sec)
+
+
+# Version normale
+secondes = 4561
+
+jours = secondes // 86400
+secondes = secondes % 86400
+
+heures = secondes // 3600
+secondes = secondes % 3600
+
+minutes = secondes // 60
+secondes = secondes % 60
